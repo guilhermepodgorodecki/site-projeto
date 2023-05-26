@@ -31,6 +31,6 @@
             <input type="submit" value="Atualizar">
         </form>
         <hr>
-        <a href="home.jsp">Página inicial</a>
+        <a href="index.jsp">Página inicial</a>
     </body>
 </html>

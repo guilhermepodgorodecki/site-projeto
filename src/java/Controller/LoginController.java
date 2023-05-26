@@ -24,7 +24,7 @@ public class LoginController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         
         this.nome = request.getParameter("nome");
-        this.senha = request.getParameter("pass");
+        this.senha = request.getParameter("senha");
         
         Usuario newUsuario = new Usuario(this.nome, this.senha);
         
@@ -32,7 +32,7 @@ public class LoginController extends HttpServlet {
             
             if (newUsuario.isLogged()) {
                 HttpSession session = request.getSession();
-                session.setAttribute("nomeSession", newUsuario);
+                session.setAttribute("userSession", newUsuario);
                 //request.setAttribute("userRequest", newUsuario);
                 request.getRequestDispatcher("index.jsp")
                         .forward(request, response);
@@ -48,7 +48,7 @@ public class LoginController extends HttpServlet {
                     out.println("<body>");
                     out.println("<script>");
                     out.println("alert('Acesso negado!');");
-                    out.println("window.location.replace('home.jsp');");
+                    out.println("window.location.replace('index.jsp');");
                     out.println("</script>");
                     out.println("</body>");
                     out.println("</html>");

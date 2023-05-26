@@ -48,5 +48,6 @@
                         alert("Exclusão cancelada");
                     }
             </script>
+               <a href="index.jsp">Página inicial</a>
     </body>
 </html>

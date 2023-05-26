@@ -1,6 +1,6 @@
 <%
     if(session.getAttribute("userNewSession") != null) {
-        response.sendRedirect("home.jsp");
+        response.sendRedirect("index.jsp");
     }
 %>
 
